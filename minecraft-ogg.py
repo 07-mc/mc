@@ -1,17 +1,10 @@
 import shutil,os,json
 mc_path = input("mc>>>")
 out = input("output>>>")
-try:
-    os.mkdir(out)
-    os.mkdir(out + "\\music")
-    os.mkdir(out + "\\record")
-    os.mkdir(out + "\\audio")
-except:
-    shutil.rmtree(out)
-    os.mkdir(out)
-    os.mkdir(out + "\\music")
-    os.mkdir(out + "\\record")
-    os.mkdir(out + "\\audio")
+os.mkdir(out)
+os.mkdir(out + "\\music")
+os.mkdir(out + "\\record")
+os.mkdir(out + "\\audio")
 json_file = mc_path + "\\assets\\indexes\\" + os.listdir(mc_path + "\\assets\\indexes")[0]
 o = open(json_file)
 file_dict = json.load(o)
