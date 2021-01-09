@@ -6,3 +6,5 @@ try:
     file_dict = json.load(o)
     o.close()
     print(file_dict)
+except:
+    pass
